@@ -19,9 +19,15 @@ Route::get('/', function () {
     return view('Pages.index');
 });
 
+
 Route::get('/contact', function () {
     return view('Pages.contact');
 });
+
+Route::get('/about', function () {
+    return view('Pages.about');
+});
+
 
 Auth::routes();
 
