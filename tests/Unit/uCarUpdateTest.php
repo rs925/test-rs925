@@ -1,27 +1,24 @@
 <?php
 
 namespace Tests\Unit;
+
 use App\Car;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class uCarInserTest extends TestCase
+class uCarUpdateTest extends TestCase
 {
     /**
      * A basic test example.
      *
      * @return void
      */
-    public function testCarInsert()
+    public function testCarUpdate()
     {
-
-        $car = new Car();
-        $car ->  Make = 'Ford';
-        $car -> Model='new1';
-        $car -> Year='2018';
+        $car= Car::find(51);
+        $car -> Year = '2000';
         $this -> assertTrue($car->save());
-
         //$this->assertTrue(true);
     }
 }
